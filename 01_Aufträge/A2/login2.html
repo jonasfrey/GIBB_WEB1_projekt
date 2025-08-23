@@ -16,15 +16,16 @@
         <h2>Login Form</h2>
         <p>Bitte anmelden</p>
 
-        <form action="#" method="post" novalidate>
-          <label for='email'>
+        <form action="#" method="post">
+          <label for='email' required>
             E-mail
           </label>
-          <input id="email" type='email'/>
+          <input id="email" type='email' required/>
           <label for='password'>
             Password
           </label>
-          <input id='password' type='password'/>
+          <input id="password" name="password" type="password" required 
+                 minlength="6" placeholder="Mindestens 6 Zeichen" autocomplete="current-password" />
           <label for='stayloggedin' >Eingeloggt bleiben</label>
           <input id='stayloggedin' type="checkbox" />
           <a href="#">Passwort vergessen?</a>
@@ -33,5 +34,10 @@
         </form>
       </section>
     </main>
+      
+  <footer>
+    <p>&copy; 2023 LocalEats. Alle Rechte vorbehalten.</p>
+  </footer>
+  
 </body>
 </html>
