@@ -20,8 +20,8 @@
         Melde dich im internen Bereich an. Alle Felder sind Pflichtfelder.
       </p>
 
+      <!-- login formular -->
       <form class="card" action="/login" method="post" novalidate>
-        <!-- Benutzername oder E-Mail -->
         <div class="form-group">
           <label for="id">Benutzername oder E-Mail</label>
           <input
@@ -38,7 +38,7 @@
           <small class="help" id="id-help">Beispiel: <em>m.keller</em> oder <em>mk@example.ch</em></small>
         </div>
 
-        <!-- Passwort -->
+        <!-- gruppe fuer passwort inputs -->
         <div class="form-group">
           <label for="password">Passwort</label>
           <input
@@ -53,7 +53,7 @@
           />
         </div>
 
-        <!-- Optionen -->
+        <!-- gruppe fuer checkbox -->
         <div class="form-row between">
           <label class="checkbox">
             <input type="checkbox" id="remember" name="remember" />
@@ -62,12 +62,12 @@
           <a class="link" href="/passwort-vergessen">Passwort vergessen?</a>
         </div>
 
-        <!-- Submit -->
+        <!-- absenden button -->
         <div class="form-row">
           <button type="submit" class="btn btn-primary">Anmelden</button>
         </div>
 
-        <!-- Form-Hinweise -->
+        <!-- hinweis fuer das formular, ausgegrauter text -->
         <p class="muted small">
           Tipp: Du kannst das Formular vollständig per Tastatur bedienen (Tab/Shift+Tab).
         </p>
