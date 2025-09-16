@@ -3,87 +3,49 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LocalEats - Login</title>
+  <title>LocalEats Login</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header" role="banner">
-    <div class="container">
-      <a class="brand" href="/" aria-label="LocalEats Startseite">LocalEats</a>
-    </div>
+  <header>
+      <h1>LocalEats Login</h1>
   </header>
 
-  <main id="main" class="site-main" role="main">
-    <section class="container">
-      <h1>LocalEats Login</h1>
-      <p class="intro">
-        Melde dich im internen Bereich an. Alle Felder sind Pflichtfelder.
-      </p>
+    <main>
+      <section class="container">
+        <h2>Login Form</h2>
+        <p>Bitte anmelden, felder mit * sind erforderlich</p>
 
-      <!-- login formular -->
-      <form class="card" action="/login" method="post" novalidate>
-        <div class="form-group">
-          <label for="id">Benutzername oder E-Mail</label>
-          <input
-            id="id"
-            name="id"
-            type="text"
-            inputmode="email"
-            autocomplete="username"
-            required
-            minlength="3"
-            pattern="(^[a-zA-Z0-9._-]{3,30}$)|(^[^@\s]+@[^@\s]+\.[^@\s]+$)"
-            title="Gib entweder einen Benutzernamen (3–30 Zeichen, a–z, 0–9, . _ -) oder eine gültige E-Mail ein."
-          />
-          <small class="help" id="id-help">Beispiel: <em>m.keller</em> oder <em>mk@example.ch</em></small>
-        </div>
-
-        <!-- gruppe fuer passwort inputs -->
-        <div class="form-group">
-          <label for="password">Passwort</label>
-          <input
-            id="password"
-            name="password"
-            type="password"
-            autocomplete="current-password"
-            required
-            minlength="8"
-            pattern="^(?=.*[A-Za-z])(?=.*\d).{8,}$"
-            title="Mindestens 8 Zeichen, inkl. Buchstaben und Zahl."
-          />
-        </div>
-
-        <!-- gruppe fuer checkbox -->
-        <div class="form-row between">
-          <label class="checkbox">
-            <input type="checkbox" id="remember" name="remember" />
-            Angemeldet bleiben
+        <form action="#" method="post">
+          <!-- email  -->
+          <label for='email' required>
+            E-mail*
           </label>
-          <a class="link" href="/passwort-vergessen">Passwort vergessen?</a>
-        </div>
+          <input id="email" type='email' name="email" required/>
+          
+          <!-- password -->
+          <label for='password'>
+            Password*
+          </label>
+          <input id="password" name="password" type="password" required 
+                 minlength="6" placeholder="Mindestens 6 Zeichen" autocomplete="current-password" />
+          
+          <!-- checkvbox -->
+                 <label for='stayloggedin' >Eingeloggt bleiben</label>
+          <input id='stayloggedin' type="checkbox"  name="stayloggedin"/>
+          <!-- link  -->
+          <a href="#">Passwort vergessen?</a>
+          
+          <!-- absenden -->
+          <button type="submit">Anmelden</button>
 
-        <!-- absenden button -->
-        <div class="form-row">
-          <button type="submit" class="btn btn-primary">Anmelden</button>
-        </div>
-
-        <!-- hinweis fuer das formular, ausgegrauter text -->
-        <p class="muted small">
-          Tipp: Du kannst das Formular vollständig per Tastatur bedienen (Tab/Shift+Tab).
-        </p>
-      </form>
-    </section>
-  </main>
-
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <small>&copy; <span id="year"></span> LocalEats</small>
-    </div>
+        </form>
+      </section>
+    </main>
+      
+  <footer>
+    <p>&copy; 2023 LocalEats. Alle Rechte vorbehalten.</p>
   </footer>
-
-  <script>
-    // rein informativ
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  
 </body>
 </html>
