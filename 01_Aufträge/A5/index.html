@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LocalEats – Interaktive Restaurantliste</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container">
+    <h1>LocalEats</h1>
+    <div class="meta">
+      <span id="hitCount">Treffer: 0</span>
+      <span id="favCount">Favoriten: 0</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section aria-label="Filter">
+      <div class="chips" id="filters">
+        <button class="chip active" data-filter="Alle">Alle</button>
+        <button class="chip" data-filter="Amerikanisch">Amerikanisch</button>
+        <button class="chip" data-filter="Asiatisch">Asiatisch</button>
+        <button class="chip" data-filter="Französisch">Französisch</button>
+        <button class="chip" data-filter="Italienisch">Italienisch</button>
+        <button class="chip" data-filter="Mediterran">Mediterran</button>
+        <button class="chip" data-filter="Vegan">Vegan</button>
+        <button class="chip" data-filter="Vietnamesisch">Vietnamesisch</button>
+        <button class="chip" data-filter="Favoriten">Favoriten</button>
+      </div>
+    </section>
+
+    <h2>Restaurants</h2>
+    <section id="list" class="grid" aria-live="polite"></section>
+  </main>
+
+  <template id="cardTemplate">
+    <article class="card">
+      <div class="thumb" aria-hidden="true">Bild 16:9</div>
+      <div class="card-body">
+        <h3 class="title"></h3>
+        <p class="sub"></p>
+        <div class="rows">
+          <p class="row cuisine"></p>
+          <p class="row rating"></p>
+        </div>
+        <div class="actions">
+          <button class="favBtn" id="favBtn" aria-pressed="false">☆ Favorit</button>
+          <a class="details" href="#" target="_blank" rel="noopener">Details</a>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <!-- defer = load script at end after other things loaded -->
+  <script src="script.js" defer></script> 
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LocalEats – Interaktive Restaurantliste</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container">
+    <h1>LocalEats</h1>
+    <div class="meta">
+      <span id="hitCount" aria-live="polite">Treffer: 0</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Suche und Sortierung -->
+    <section class="controls" aria-label="Suche und Sortierung">
+      <input 
+        type="search" 
+        id="searchInput" 
+        placeholder="Restaurant suchen..." 
+        aria-label="Restaurant-Name suchen"
+        class="search-input"
+      />
+      <button 
+        id="sortBtn" 
+        class="sort-btn"
+        aria-label="Sortierung umschalten"
+      >
+        Bewertung ▼
+      </button>
+    </section>
+
+    <!-- Filter-Chips -->
+    <section aria-label="Filter">
+      <div class="chips" id="filters"></div>
+    </section>
+
+    <!-- Restaurant-Liste -->
+    <h2>Restaurants</h2>
+    <section id="list" class="grid"></section>
+  </main>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

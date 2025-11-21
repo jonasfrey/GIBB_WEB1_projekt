@@ -1,0 +1,234 @@
+:root {
+  --col_bg: #0b0d10;
+  --col_panel: #12161b;
+  --col_muted: #7b8794;
+  --col_text: #e7edf3;
+  --col_accent: #4f8cff;
+  --col_chip: #1b2129;
+  --col_chip_active: #22324a;
+  --col_ring: #2b3a4d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background: var(--col_bg);
+  color: var(--col_text);
+  font: 16px/1.5 system-ui, Segoe UI, Roboto, Arial;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.meta {
+  display: flex;
+  gap: 16px;
+  color: var(--col_muted);
+}
+
+/* Suche und Sortierung */
+.controls {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0 16px;
+}
+
+.search-input {
+  flex: 1;
+  background: var(--col_panel);
+  border: 1px solid var(--col_ring);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: var(--col_text);
+  font: inherit;
+}
+
+.search-input:focus {
+  outline: 2px solid var(--col_accent);
+  outline-offset: 2px;
+}
+
+.search-input::placeholder {
+  color: var(--col_muted);
+}
+
+.sort-btn {
+  background: var(--col_chip);
+  border: 1px solid var(--col_ring);
+  border-radius: 8px;
+  padding: 10px 16px;
+  color: var(--col_text);
+  cursor: pointer;
+  font: inherit;
+  white-space: nowrap;
+}
+
+.sort-btn:hover {
+  background: var(--col_chip_active);
+  border-color: var(--col_accent);
+}
+
+.sort-btn:focus {
+  outline: 2px solid var(--col_accent);
+  outline-offset: 2px;
+}
+
+/* Filter-Chips */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.chip {
+  background: var(--col_chip);
+  color: var(--col_text);
+  border: 1px solid var(--col_ring);
+  border-radius: 999px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.chip:hover {
+  background: var(--col_chip_active);
+}
+
+.chip:focus {
+  outline: 2px solid var(--col_accent);
+  outline-offset: 2px;
+}
+
+.chip.active {
+  background: var(--col_chip_active);
+  border-color: var(--col_accent);
+}
+
+/* Restaurant-Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--col_panel);
+  border: 1px solid var(--col_ring);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.thumb {
+  aspect-ratio: 16/9;
+  background: #20262e;
+  color: #6c7683;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+.card-body {
+  padding: 12px 14px;
+}
+
+.title {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.sub {
+  margin: 0 0 10px;
+  color: var(--col_muted);
+  font-size: 14px;
+}
+
+.rows {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.row {
+  margin: 0;
+  color: #b4c0cf;
+  font-size: 13px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.favBtn {
+  border: none;
+  background: #1f2833;
+  color: #cfe1ff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.favBtn:hover {
+  background: #263248;
+}
+
+.favBtn:focus {
+  outline: 2px solid var(--col_accent);
+  outline-offset: 2px;
+}
+
+.favBtn[aria-pressed="true"] {
+  background: #263248;
+  color: #ffd76a;
+}
+
+.details {
+  color: #c7d2fe;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.details:hover {
+  text-decoration: underline;
+}
+
+.details:focus {
+  outline: 2px solid var(--col_accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+h2 {
+  margin: 24px 0 16px;
+  font-size: 20px;
+}
