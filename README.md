@@ -14,7 +14,7 @@ Die Tabelle unten zeigt den aktuellen Stand meiner Bearbeitung.
 | **A4**: UI/UX                                     | Ja                 | 2.5                           | 0                             |
 | **A5**: JS Grundlagen                             | Ja                 | 2.5                           | 0                             |
 | **A6**: Modernes JavaScript                       | Ja                 | 2                             | 0                             |
-| **A7**: Asynchrones JavaScript                    | Nein               | 0                             | 0                             |
+| **A7**: Asynchrones JavaScript                    | Ja                 | 2                             | 0                             |
 
 | **Totalpunkte (max. 21)** | **0** |
 |---------------------------|-------|

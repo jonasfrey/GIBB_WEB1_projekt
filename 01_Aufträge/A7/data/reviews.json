@@ -1,0 +1,8 @@
+[
+  {"id":1,"restaurantId":1,"author":"Lena","text":"Tolles Essen, freundlicher Service."},
+  {"id":2,"restaurantId":1,"author":"Marco","text":"Authentische Pasta."},
+  {"id":3,"restaurantId":2,"author":"Yuki","text":"Sehr frische Sushi."},
+  {"id":4,"restaurantId":3,"author":"Paul","text":"Viele vegane Optionen."},
+  {"id":5,"restaurantId":7,"author":"Anne","text":"Feines Menü, etwas teuer."},
+  {"id":6,"restaurantId":4,"author":"Tom","text":"Gutes Preis-Leistungs-Verhältnis."}
+]
